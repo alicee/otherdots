@@ -15,7 +15,3 @@
 	pl = pull ffonly
 [branch]
 	autosetuprebase = always
-[branch "master"]
-	rebase = true
-[branch "new_woo_site"]
-	rebase = true
