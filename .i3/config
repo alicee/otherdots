@@ -10,8 +10,8 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-assign [class="Firefox"] → 4
-assign [class="firefox"] → 4
+assign [class="google-chrome"] → 9
+assign [class="google-chrome-beta"] → 9
 assign [class="Transmission"] → 8
 assign [class="transmission-gtk"] → 8
 
@@ -212,7 +212,7 @@ bar {
 }
 
 exec --no-startup-id urxvt
-exec --no-startup-id firefox
+exec --no-startup-id google-chrome
 
 # starting a specially named term automatically 
 exec --no-startup-id urxvt -name scratchpad -e zsh -c "vim -c 'startinsert'"
@@ -223,6 +223,6 @@ for_window [class="URxvt" instance="scratchpad"] move scratchpad
 bindsym Mod4+Up exec bright more 
 bindsym Mod4+Down exec bright less
 
-exec_always /home/alice/config/startup.sh
+#exec_always /home/alice/config/startup.sh
 
 
