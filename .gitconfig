@@ -15,3 +15,15 @@
 	pl = pull ffonly
 [branch]
 	autosetuprebase = always
+[url "sso://user/alicemaindi/"]
+	insteadof = me:
+[diff]
+  tool = meld
+[merge]
+  tool = meld
+[alias]
+  meld = !/usr/local/google/home/alicemaindi/bin/git-meld
+	l = log --pretty=format:'%C(yellow)%h%C(white) %an <%ae> %>|(80)%ai%Creset%n%C(bold)%w(0,4,4)%s%C(reset)%n%+b'
+	ll = log --stat
+	lg = log
+	lp = log -p

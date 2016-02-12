@@ -1,4 +1,54 @@
-! caps lock to escape (but use xinitrc)
-clear Lock
-keycode 66 = Escape
+! Map left windows key to mode switch.
+keycode 133 = Mode_switch
 
+! number row.
+keycode 9 = asciitilde grave
+keycode 10 = exclam 1
+keycode 11 = at 2
+keycode 12 = numbersign 3
+keycode 13 = dollar 4
+keycode 14 = percent 5
+keycode 15 = asciicircum 6
+keycode 16 = ampersand 7
+keycode 17 = asterisk 8
+keycode 18 = parenleft 9
+keycode 19 = parenright 0
+keycode 20 = minus underscore
+keycode 21 = equal plus
+
+! First row.
+keycode 26 = f F
+keycode 27 = p P
+keycode 28 = g G
+keycode 29 = j J Down
+keycode 30 = l L Right
+keycode 31 = u U udiaeresis Udiaeresis
+keycode 32 = y Y
+keycode 33 = semicolon colon
+keycode 34 = braceleft bracketleft
+keycode 35 = braceright bracketright
+keycode 51 = bar backslash
+
+! Second row.
+keycode 38 = a A adiaeresis Adiaeresis
+keycode 39 = r R
+keycode 40 = s S ssharp
+keycode 41 = t T
+keycode 42 = d D
+keycode 43 = h H Left
+keycode 44 = n N
+keycode 45 = e E
+keycode 46 = i I
+keycode 47 = o O odiaeresis Odiaeresis
+
+! Third row.
+keycode 52 = x X
+keycode 53 = c C
+keycode 54 = v V
+keycode 55 = b B
+keycode 56 = z Z
+keycode 57 = k K Up
+
+! Replace caps lock with escape. Shift + Escape gives backspace.
+clear lock
+keycode 66 = Escape BackSpace

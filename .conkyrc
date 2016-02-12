@@ -70,16 +70,16 @@ cpu_avg_samples 2
 ## Stuff after 'TEXT' will be formatted on screen
 TEXT
 # Free space on /home
-/home ${fs_free /home} | \
+#/home ${fs_free /home} | \
 # Ethernet status
 # eth0 ${if_up eth0}${addr eth0}${endif} | \
 # Wireless status
 # wlan0 ${if_up wlan0}${addr wlan0}${endif} | \
 # CPU stats
-CPU ${cpu cpu1}% at ${freq_g 1}ghz ${exec sensors | grep "Core 0"|awk '{print $3}'} | \
+#CPU ${cpu cpu1}% at ${freq_g 1}ghz ${exec sensors | grep "Core 0"|awk '{print $3}'} | \
 # RAM in use
-Memory ${memperc}% | \
-Battery ${exec acpi -b | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\2/'}, ${exec acpi -b | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%  | \
+#Memory ${memperc}% | \
+#Battery ${exec acpi -b | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\2/'}, ${exec acpi -b | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%  | \
 # Weather temperature
 # ${exec weather home --headers="Temperature" -q | awk '/Temperature/ {print $2}'}
 ${exec weather home --headers="Temperature" -q | awk '/Temperature/ {print substr($4,2) "°C (" $2"°F),"}'} ${exec weather home --metric --headers="Sky conditions" -q | awk '/Sky conditions/ {print $3 " " $4}'}| \

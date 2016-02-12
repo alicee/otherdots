@@ -14,16 +14,23 @@
 ! scrollback buffer lines - 65535 is max on most machines (64 is default)
 URxvt*saveLines: 65535
 
-URxvt.perl-ext-common: ...,url-select,font-size
+URxvt.perl-ext-common: ...,url-select,font-size,default,matcher
 URxvt.keysym.M-u: perl:url-select:select_next
 ! If true, selected URLs are copied to PRIMARY
 URxvt.url-select.autocopy: true
 ! Mouse button to click-open URLs (default: 2)
-URvxt.url-select.button: 2 
+URvxt.url-select.button: 2
 ! Browser/command to open selected URL with
-URxvt.url-select.launcher: firefox -new-tab
+! URxvt.url-select.launcher: chromium -new-tab
 ! If set to true, all URLs get underlined
 URxvt.url-select.underline: true
+
+! allow scrolling back in buffer without
+! auto-scrolling taking over (when terminal output changes)
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
 
 ! URxvt.keysym.Tab-c: perl:clipboard:copy
 ! URxvt.keysym.Tab-v: perl:clipboard:paste
@@ -48,8 +55,8 @@ URxvt.keysym.C-Print:    perl:font-size:decglobal
 !
 ! Xft: DejaVu fonts
 !  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu
-URxvt*font: xft:inconsolata:pixelsize=16:antialias=true:hinting=true
-URxvt*boldFont: xft:inconsolata:bold:pixelsize=16:antialias=true:hinting=true
+URxvt*font: xft:inconsolata:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont: xft:inconsolata:bold:pixelsize=12:antialias=true:hinting=true
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
@@ -168,3 +175,12 @@ URxvt*color15:               S_base3
 ! Home and End keybindings
 ! URxvt*keysym.Home: \033[1~
 ! URxvt*keysym.End: \033[4~
+!
+!
+! Make urls clickable
+URxvt.url-launcher: /usr/bin/google-chrome
+URxvt.matcher.button: 1
+
+! Set url link color
+URxvt.colorUL: #4682B4
+
