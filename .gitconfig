@@ -21,6 +21,9 @@
   tool = meld
 [merge]
   tool = meld
+[mergetool "meld"]
+  cmd = meld $LOCAL $BASE $REMOTE --auto-merge --output $MERGED
+  # cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $BASE $REMOTE --output $MERGED
 [alias]
   meld = !/usr/local/google/home/alicemaindi/bin/git-meld
 	l = log --pretty=format:'%C(yellow)%h%C(white) %an <%ae> %>|(80)%ai%Creset%n%C(bold)%w(0,4,4)%s%C(reset)%n%+b'

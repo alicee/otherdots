@@ -31,16 +31,19 @@ URxvt*scrollTtyOutput:      false
 URxvt*scrollWithBuffer:     true
 URxvt*scrollTtyKeypress:    true
 
+! Disable "keycap insert mode" for Control Shift.
+URxvt*iso14755 : false
+URxvt*iso14755_52: false
 
 ! URxvt.keysym.Tab-c: perl:clipboard:copy
 ! URxvt.keysym.Tab-v: perl:clipboard:paste
 ! URxvt.keysym.Tab-Shift-v: perl:clipboard:paste_escaped
 
 ! URxvt.perl-ext-common: ...,font-size
-URxvt.keysym.Pause:     perl:font-size:increase
-URxvt.keysym.Print:   perl:font-size:decrease
-URxvt.keysym.C-Pause:      perl:font-size:incglobal
-URxvt.keysym.C-Print:    perl:font-size:decglobal
+URxvt.keysym.Control-Shift-X:     perl:font-size:increase
+URxvt.keysym.Control-Shift-C:   perl:font-size:decrease
+! URxvt.keysym.C-Pause:      perl:font-size:incglobal
+! URxvt.keysym.C-Print:    perl:font-size:decglobal
 
 ! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
 !  Fedora/debian packages: libXft/libxft2

@@ -33,12 +33,12 @@ keycode 51 = bar backslash
 keycode 38 = a A adiaeresis Adiaeresis
 keycode 39 = r R
 keycode 40 = s S ssharp
-keycode 41 = t T
+keycode 41 = t T BackSpace
 keycode 42 = d D
 keycode 43 = h H Left
-keycode 44 = n N
-keycode 45 = e E
-keycode 46 = i I
+keycode 44 = n N minus
+keycode 45 = e E underscore
+keycode 46 = i I equal
 keycode 47 = o O odiaeresis Odiaeresis
 
 ! Third row.
