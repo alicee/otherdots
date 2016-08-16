@@ -16,6 +16,8 @@ keycode 19 = parenright 0
 keycode 20 = minus underscore
 keycode 21 = equal plus
 
+keycode 22 = NoSymbol
+
 ! First row.
 keycode 26 = f F
 keycode 27 = p P
